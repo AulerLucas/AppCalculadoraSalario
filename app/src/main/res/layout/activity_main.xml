@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinza"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtSalario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Digite seu sálario..."
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPorcentual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSalario"
+        android:layout_marginTop="20dp"
+        android:text="Digite seu sálario:"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edSalario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPorcentual"
+        android:textColor="@color/white" />
+
+    <RadioGroup
+        android:layout_below="@+id/edSalario"
+        android:id="@+id/rgopcoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints,UnknownId">
+
+        <RadioButton
+            android:id="@+id/rb40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="40%"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb45"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="45%"
+            android:textColor="@color/white"
+            android:textSize="25dp"/>
+
+        <RadioButton
+            android:id="@+id/rb50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="50%"
+            android:textColor="@color/white"
+            android:textSize="25dp"/>
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btcalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rgopcoes"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/verde"
+        android:text="Calcular novo salário"
+        android:textSize="20sp"
+        tools:ignore="UnknownId" />
+
+
+</RelativeLayout>
